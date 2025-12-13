@@ -1,0 +1,27 @@
+{
+  "name": "tienditabackendnodejs",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/VillanuevaNoraB/Tiendita-BackEnd-NodeJS#readme",
+  "bugs": {
+    "url": "https://github.com/VillanuevaNoraB/Tiendita-BackEnd-NodeJS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VillanuevaNoraB/Tiendita-BackEnd-NodeJS.git"
+  },
+  "license": "ISC",
+  "author": "Villanueva Nora",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase": "^12.5.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
