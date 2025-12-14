@@ -1,22 +1,3 @@
-Conversación abierta. 1 mensaje no leído.
-
-Ir al contenido
-Uso de Gmail con lectores de pantalla
-1 de 160
-readme
-Recibidos
-
-Agustín Marrero
-Archivos adjuntos
-17:14 (hace 47 minutos)
-para mí
-
-Parece que este mensaje está en inglés
-hay que adapatarlo, pero si es bastante generico para lo que necesita el curso
- Un archivo adjunto
-  •  Analizados por Gmail
-
-
 
 # Talentotech Backend API
 
