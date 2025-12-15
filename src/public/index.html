@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiendita BackEnd NodeJS</title>
+    <!DOCTYPE html>
+        <style>
+          :root {
+            --bg: #0f172a; /* slate-900 */
+            --bg-card: #020617; /* slate-950 */
+            --primary: #22d3ee; /* cyan-400 */
+            --secondary: #38bdf8; /* sky-400 */
+            --text: #e5e7eb; /* gray-200 */
+            --muted: #94a3b8; /* slate-400 */
+            --border: #1e293b; /* slate-800 */
+            --btn: #020617;
+            --btn-hover: #020617cc;
+          }
+
+          * {
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              "Segoe UI", sans-serif;
+          }
+
+          body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(
+                1200px 600px at 20% -10%,
+                #0ea5e933,
+                transparent
+              ),
+              radial-gradient(800px 400px at 100% 10%, #22d3ee22, transparent),
+              var(--bg);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+          }
+
+          .container {
+            width: 100%;
+            max-width: 860px;
+            background: linear-gradient(180deg, #020617ee, #020617cc);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 48px 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+          }
+
+          header {
+            text-align: center;
+            margin-bottom: 40px;
+          }
+
+          header h1 {
+            font-size: 2.4rem;
+            margin: 0 0 12px 0;
+            background: linear-gradient(
+              90deg,
+              var(--primary),
+              var(--secondary)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          header p {
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 640px;
+          }
+
+          .info {
+            margin: 36px 0 48px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+          }
+
+          .card {
+            background: #020617;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px 18px;
+          }
+
+          .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            color: var(--primary);
+          }
+
+          .card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.5;
+          }
+
+          .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+          }
+
+          .btn {
+            min-width: 180px;
+            padding: 14px 22px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: linear-gradient(180deg, #020617, #020617);
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease,
+              border-color 0.2s ease;
+          }
+
+          .btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(34, 211, 238, 0.25);
+          }
+
+          footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+          }
+
+          footer span {
+            color: var(--primary);
+            font-weight: 600;
+          }
+
+          @media (max-width: 480px) {
+            .container {
+              padding: 36px 24px;
+            }
+            header h1 {
+              font-size: 1.9rem;
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <main class="container">
+          <header>
+            <h1>Talentotech Back-End API</h1>
+            <p>
+              Proyecto académico desarrollado para el curso
+              <strong>Back-End con Node.js – Talento Tech 2025</strong>. API
+              REST con autenticación JWT y persistencia en Firebase / Firestore.
+            </p>
+          </header>
+
+          <section class="info">
+            <div class="card">
+              <h3>🛠 Tecnologías</h3>
+              <p>Node.js, Express, CORS, JWT, Firebase y Firestore.</p>
+            </div>
+            <div class="card">
+              <h3>🔐 Seguridad</h3>
+              <p>
+                Rutas protegidas mediante autenticación con JSON Web Tokens.
+              </p>
+            </div>
+            <div class="card">
+              <h3>📦 Arquitectura</h3>
+              <p>
+                Separación por capas: routes, controllers, services, models y
+                middleware.
+              </p>
+            </div>
+            <div class="card">
+              <h3>📚 Documentación</h3>
+              <p>Endpoints documentados y testeables desde Swagger UI.</p>
+            </div>
+          </section>
+          <section class="info">
+            <div class="card">
+              <h2>Configuración rápida</h2>
+                <ol>
+                    <li>Cloná el repo <code>https://github.com/amarrero86mr/talentotech_TP_backEnd.git</code></li>
+                    <li>Ejecutá <code>npm install</code>.</li>
+                    <li>Crea y configura tu Firestore/Firebase <code>ejemplo_db.json</code></li>
+                    <li>Configurá tus variables en <code>.env</code>.</li>
+                    <li>Iniciá el servidor con <code>npm run dev</code>.</li>
+                    <li>Abrí <code>http://localhost:3000/register</code> y registrate</li>
+                    <li>Ve a logueate <code>http://localhost:3000/login</code></li>
+                    <li>Compia en la consola el token <code>localStorage.token</code> </li>
+                    <li>Y pega el token en docs para acceder sin limite a los endpoint</li>
+                </ol>
+            </div>
+          </section>
+
+          <section class="actions">
+            <a class="btn" href="login.html"> 🔑 Login </a>
+            <a class="btn" href="register.html"> ✍️ Register </a>
+            <a class="btn" href="doc.html"> 📘 Swagger Docs </a>
+          </section>
+
+          <footer>
+            <p>
+              Desarrollado por <span>Nora Villanueva</span> · Talento Tech 2025
+            </p>
+          </footer>
+        </main>
+      </body>
+    </html>
+  </head>
+</html>
