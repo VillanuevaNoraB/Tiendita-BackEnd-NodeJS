@@ -1,9 +1,8 @@
-
 # Talento Tech Backend API
 
 ## 📌 Descripción
 
-Este proyecto corresponde a un **Trabajo Práctico de Back-End** desarrollado como parte del curso **Back-End con Node.js – Talento Tech 2025**, de la *Agencia de Habilidades para el Futuro*.
+Este proyecto corresponde a un **Trabajo Práctico de Back-End** desarrollado como parte del curso **Back-End con Node.js – Talento Tech 2025**, de la _Agencia de Habilidades para el Futuro_.
 
 El objetivo principal del proyecto es **aprender y aplicar buenas prácticas en la construcción de un backend**, comprendiendo la separación de responsabilidades mediante **rutas, controladores, servicios, modelos y middlewares**, así como la integración con una base de datos no relacional y la implementación de autenticación.
 
@@ -29,6 +28,7 @@ El backend está pensado para ser consumido por uno o varios frontends externos.
 - **CORS**
 - **JSON Web Tokens (JWT)**
 - **Firebase / Firestore**
+- **Swagger**
 
 ---
 
@@ -40,6 +40,9 @@ src/
 │   ├── products.controllers.js
 │   └── user.controllers.js
 │
+├── data/
+│   └── data.js
+│
 ├── services/
 │   ├── auth.services.js
 │   └── products.services.js
@@ -48,6 +51,12 @@ src/
 │   ├── firebase.js
 │   ├── products.models.js
 │   └── visitors.models.js
+│
+├── public/
+│   ├── doc.html
+│   ├── index.html
+│   ├── register.html
+│   └── login.html
 │
 ├── middleware/
 │   └── authentication.js
@@ -109,8 +118,8 @@ const token = localStorage.getItem("token");
 
 const response = await fetch(`${API_URL}/products`, {
   headers: {
-    Authorization: `Bearer ${token}`
-  }
+    Authorization: `Bearer ${token}`,
+  },
 });
 
 const data = await response.json();
@@ -174,7 +183,7 @@ GitHub: [NoraV](https://github.com/VillanuevaNoraB)
 
 ## 🙏 Agradecimientos
 
-- **Nicolás Riquelme**  
+- **Nicolás Riquelme**
 - **Ana Belén Zambón**
 
 Por el acompañamiento y la enseñanza durante el curso.
@@ -184,6 +193,3 @@ Por el acompañamiento y la enseñanza durante el curso.
 ## 📄 Licencia
 
 Este proyecto se distribuye bajo la licencia **ISC**, permitiendo su uso, modificación y distribución con mención de la autora.
-
-readme_talentotech_backend.md
-Mostrando readme_talentotech_backend.md.
