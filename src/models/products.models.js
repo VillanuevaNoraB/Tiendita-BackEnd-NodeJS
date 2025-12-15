@@ -35,9 +35,6 @@ export function obtenerProducto(id) {
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
-        console.log("Snap data: ", docSnap);
-        console.log("Document ID:", docSnap.id);
-        console.log("Document data:", docSnap.data());
         res(docSnap.data());
       } else {
         console.log("No such document!");
