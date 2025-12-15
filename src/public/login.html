@@ -152,7 +152,7 @@
 
           if (res.ok && data.token) {
             localStorage.setItem("token", data.token);
-            window.location.href = "/docs.html";
+            window.location.href = "/doc.html";
           } else {
             alert(data.msg || "Error al iniciar sesión");
           }

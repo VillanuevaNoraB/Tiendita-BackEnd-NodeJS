@@ -1,5 +1,5 @@
 
-# Talentotech Backend API
+# Talento Tech Backend API
 
 ## 📌 Descripción
 
@@ -37,8 +37,8 @@ El backend está pensado para ser consumido por uno o varios frontends externos.
 ```bash
 src/
 ├── controllers/
-│   ├── auth.controllers.js
-│   └── products.controllers.js
+│   ├── products.controllers.js
+│   └── user.controllers.js
 │
 ├── services/
 │   ├── auth.services.js
@@ -88,7 +88,7 @@ Authorization: Bearer <token>
 
 ### 🔑 Autenticación
 
-- **POST** `/api/visitors/login`
+- **POST** `/api/user/login`
   - Autentica un usuario y devuelve un JWT
 
 ### 📦 Productos

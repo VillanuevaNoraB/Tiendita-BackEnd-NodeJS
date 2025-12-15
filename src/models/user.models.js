@@ -21,7 +21,7 @@ export const registerUserModel = (user) => {
       console.log(user);
       const passhash = await bcrypt.hash(user.password, 10);
       const email = user.email;
-      const newUser = { email: email, passhash: passhash };
+      const newUser = { email: email, clave: passhash };
 
       const docRef = await addDoc(collection(db, "usuarios"), newUser);
       res({ ...newUser, id: docRef.id });

@@ -8,6 +8,11 @@ const __dirname = path.dirname(__fileName);
 /**
  * @swagger
  * components:
+ *   securitySchemes:
+ *     bearerAuth:
+ *       type: http
+ *       scheme: bearer
+ *       bearerFormat: JWT
  *
  *   schemas:
  *     Products:
@@ -46,15 +51,15 @@ export const swaggerSpec = swaggerJsDoc({
       description: "TP de Back-end",
     },
     components: {
-      // securitySchemes: {
-      //   bearerAuth: {
-      //     type: "http",
-      //     scheme: "bearer",
-      //     bearerFormat: "JWT",
-      //   },
-      // },
+      securitySchemes: {
+        bearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
+        },
+      },
     },
-    // security: [{ bearerAuth: [] }],
+    security: [{ bearerAuth: [] }],
   },
   apis: [
     path.join(__dirname, "routes/*.js"),
@@ -62,10 +67,3 @@ export const swaggerSpec = swaggerJsDoc({
     path.join(__dirname, "swagger.js"),
   ],
 });
-
-//  * components:
-//  *   securitySchemes:
-//  *     bearerAuth:
-//  *       type: http
-//  *       scheme: bearer
-//  *       bearerFormat: JWT

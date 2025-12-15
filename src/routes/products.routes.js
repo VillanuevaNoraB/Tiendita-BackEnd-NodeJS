@@ -14,6 +14,8 @@ const routes = express.Router();
  * /api/products:
  *   get:
  *     summary: Retorna todos los productos.
+ *     security:
+ *       - bearerAuth: []
  *     tags: [Products]
  *     responses:
  *       200:
@@ -26,9 +28,6 @@ const routes = express.Router();
  *                 $ref: '#/components/schemas/Products'
  */
 routes.get("/products", getAllProducts);
-//  *     summary: Retorna todos los productos.
-//  *     security:
-//  *       - bearerAuth: []
 
 /**
  * @swagger
@@ -62,6 +61,8 @@ routes.get("/products/:id", getProductById);
  * /api/products/create:
  *   post:
  *     summary: Crear un nuevo producto
+ *     security:
+ *       - bearerAuth: []
  *     tags: [Products]
  *     requestBody:
  *       required: true
@@ -81,12 +82,6 @@ routes.get("/products/:id", getProductById);
  *         description: Peticion erronea
  */
 routes.post("/products/create", addProduct);
-
-//  *     summary: Crear un nuevo producto
-//  *     security:
-//  *       - bearerAuth: []
-
-
 
 /**
  * @swagger
